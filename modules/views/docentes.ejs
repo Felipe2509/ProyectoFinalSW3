@@ -1,0 +1,63 @@
+<%- include('partials/_header'); %>
+
+<center><h1>DOCENTES</h1></center>
+
+
+<div class="container">
+    <a href="/create" class="btn btn-outline-primary mt-4">Agregar</a>
+    <table class="table table-bordered table-striped text-center mt-4">
+        <thead>
+            <tr class="bg-primary text-white">
+                <th scope="col">#</th>
+                <th scope="col">Nombre</th>
+                <th scope="col">Apellido</th>
+                <th scope="col">Tipo ID</th>
+                <th scope="col">ID</th>
+                <th scope="col">Tipo</th>
+                <th scope="col">Contrato</th>
+                <th scope="col">Area</th>
+                <th scope="col">Estado</th>
+                <th scope="col">Acciones</th>
+            </tr>
+        </thead>
+        <tbody>
+            <% data.forEach((rows)=> { %>
+                <tr>
+                    <td>
+                        <%= rows.DOCENTE_ID %>
+                    </td>
+                    <td>
+                        <%= rows.DOCENTE_NOMBRES %>
+                    </td>
+                    <td>
+                        <%= rows.DOCENTE_APELLIDOS %>
+                    </td>
+                    <td>
+                        <%= rows.DOCENTE_TIPOIDENTIFICACION %>
+                    </td>
+                    <td>
+                        <%= rows.DOCENTE_IDENTIFICACION %>
+                    </td>
+                    <td>
+                        <%= rows.DOCENTE_TIPO %>
+                    </td>
+                    <td>
+                        <%= rows.DOCENTE_TIPOCONTRATO %>
+                    </td>
+                    <td>
+                        <%= rows.DOCENTE_AREA %>
+                    </td>
+                    <td>
+                        <%= rows.DOCENTE_ESTADO %>
+                    </td>
+                    <td>
+                        <a href="/edit/<%= data.DOCENTE_ID %>" class="btn btn-outline-info">Editar</a>
+                        <a href="/delete/<%= data.DOCENTE_ID %>" class="btn btn-outline-danger">Activar/Inactivar</a>
+                    </td>
+                </tr>
+                <% }) %>
+        </tbody>
+    </table>
+</div>
+
+<%- include('partials/_footer'); %>
