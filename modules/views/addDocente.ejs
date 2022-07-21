@@ -1,0 +1,60 @@
+<%- include('partials/_header'); %>
+
+<div class="container mt-4">
+    <div class="card border-secondary">
+        <div class="card-header">Nuevo Docente</div>
+        <div class="card-body">
+            <form action="/saveDocente" method="POST">
+                <div class="mb-3">
+                    <label for="inputNombre" class="form-label">Nombre</label>
+                    <input class="form-control" id="DOCENTE_NOMBRES" name="DOCENTE_NOMBRES" tabindex="1">
+                </div>
+                <div class="mb-3">
+                    <label for="inputApellido" class="form-label">Apellido</label>
+                    <input class="form-control" id="DOCENTE_APELLIDO" name="DOCENTE_APELLIDOS" tabindex="2">
+                </div>
+                <div class="mb-3">
+                    <label for="inputTipoId" class="form-label">Tipo de documento</label>
+                    <select class="form-select" id="tipoId" name="DOCENTE_TIPOIDENTIFICACION" tabindex="3">
+                        <option value="CC">CC</option>
+                        <option value="CE">CE</option>
+                        <option value="TI">TI</option>
+                    </select>
+                </div>
+                <div class="mb-3">
+                    <label for="inputNumId" class="form-label">Numero de identificación</label>
+                    <input class="form-control" id="numId" name="DOCENTE_IDENTIFICACION" tabindex="4">
+                </div>
+                <div class="mb-3">
+                    <label for="inputTipoDocente" class="form-label">Tipo de docente</label>
+                    <select class="form-select" id="tipoDocente" name="DOCENTE_TIPO" tabindex="5">
+                        <option value="Profesional">Profesional</option>
+                        <option value="Tecnico">Tecnico</option>
+                    </select>
+                </div>
+                <div class="mb-3">
+                    <label for="inputTipoContrato" class="form-label">Tipo de contrato</label>
+                    <select class="form-select" id="tipoContrato" name="DOCENTE_TIPOCONTRATO" tabindex="6">
+                        <option value="PT">Planta</option>
+                        <option value="CNT">Contratista</option>
+                    </select>
+                </div>
+                <div>
+                    <label for="inputArea" class="form-label">Area</label>
+                    <input class="form-control" id="area" name="DOCENTE_AREA" tabindex="7">
+                </div>
+                <div class="mb-3">
+                    <label for="inputEstado" class="form-label">Estado</label>
+                    <select class="form-select" id="estado" name="DOCENTE_ESTADO" tabindex="8" >
+                        <option value="Activo">Activo</option>
+                        <option value="Inactivo">Inactivo</option>
+                    </select>
+                </div>
+                <button type="submit" class="btn btn-primary">Guardar</button>
+                <a href="/" class="btn btn-secondary">Cancelar</a>
+            </form>
+        </div>
+    </div>
+</div>
+
+<%- include('partials/_footer'); %>

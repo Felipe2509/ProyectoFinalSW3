@@ -4,10 +4,10 @@
 
 
 <div class="container">
-    <a href="/create" class="btn btn-outline-primary mt-4">Agregar</a>
+    <a href="/addDocente" class="btn btn-primary">Agregar</a>
     <table class="table table-bordered table-striped text-center mt-4">
         <thead>
-            <tr class="bg-primary text-white">
+            <tr class="bg-dark text-white">
                 <th scope="col">#</th>
                 <th scope="col">Nombre</th>
                 <th scope="col">Apellido</th>
@@ -51,13 +51,15 @@
                         <%= rows.DOCENTE_ESTADO %>
                     </td>
                     <td>
-                        <a href="/edit/<%= data.DOCENTE_ID %>" class="btn btn-outline-info">Editar</a>
-                        <a href="/delete/<%= data.DOCENTE_ID %>" class="btn btn-outline-danger">Activar/Inactivar</a>
+                        <a href="/editDocente/<%= rows.DOCENTE_ID %>" class="btn btn-outline-info">Editar</a>
+                        <a href="/stateDocente/<%= rows.DOCENTE_ID %>" class="btn btn-outline-danger">Activar/Inactivar</a>
                     </td>
                 </tr>
                 <% }) %>
         </tbody>
     </table>
 </div>
+
+
 
 <%- include('partials/_footer'); %>
